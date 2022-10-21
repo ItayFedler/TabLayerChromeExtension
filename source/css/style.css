@@ -1,0 +1,314 @@
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: 400;
+  overflow: hidden; /* Hide scrollbars */
+}
+/*////////////////////////////////////////////////*/
+.example::-webkit-scrollbar {
+  width: 6px;               /* width of the entire scrollbar */
+}
+.example::-webkit-scrollbar-track {
+  background: transparent;        /* color of the tracking area */
+}
+.example::-webkit-scrollbar-thumb {
+  background-color: rgba(156, 155, 155, 0.863);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+    /* creates padding around scroll thumb */
+}
+/*
+Hide scrollbar for IE and Edge
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+ 
+.example {
+  -ms-overflow-style: none;
+  overflow: hidden;
+}
+*/
+/*//////////////////////////////////*/
+.output {
+  padding: 0px 0px;
+}
+
+.boxed {
+  width: 100%;
+  padding: 15px;
+  max-width: 1170px;
+  margin: 0px auto;
+}
+
+.cs_list_items .filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* Set the navbar to fixed position */
+  /*
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  margin-top: 10px; 
+  */
+
+  margin-top: 0px;
+  position: fixed; 
+  width: 95%; 
+  z-index:9999;
+  background-color: #fff;
+  padding-top: 0px;
+}
+.cs_list_items .settings_icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  /* padding: 20px; */
+  width: 30px;
+  height: 30px;
+  backdrop-filter: blur(6px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index:999;
+  /* border: 1px solid #000; */
+}
+.cs_list_items .settings_icon i {
+  font-size: 15px;
+  color: #fff;
+}
+.cs_list_items .filters .search-bar {
+  position: relative;
+  flex: 1;
+}
+.cs_list_items .filters .search-bar i {
+  position: absolute;
+  top: 7px;
+  font-size: 25px;
+  left: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.cs_list_items .filters .search-bar input {
+  padding: 10px 20px 10px 40px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  font-size: 15px;
+  width: 100%;
+  outline: none;
+}
+
+.cs_list_items .filters .sort_by {
+  display: flex;
+  align-items: center;
+  margin: 0px 5%;
+  min-width: 20%;
+  position: relative;
+}
+.cs_list_items .filters .sort_by select {
+  padding: 10px 34px 10px 8px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  font-size: 15px;
+  margin-left: 10px;
+  outline: none;
+  flex: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.cs_list_items .filters .sort_by:after {
+  font-family: "Ionicons";
+  content: "\f35f";
+  position: absolute;
+  right: 13px;
+  font-size: 24px;
+}
+
+.cs_list_items .filters .display_type {
+  display: flex;
+  align-items: center;
+  /* background-color: rgba(0, 0, 0, 0.1); */
+}
+.cs_list_items .filters .display_type button {
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  outline: none;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+.cs_list_items .filters .display_type button.active {
+  color: rgb(39, 138, 252);
+}
+
+.cs_list_items .result_body {
+  /* padding: 20px 0px; */
+  padding:40px 0px;
+}
+.cs_list_items .list_view .item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+}
+.cs_list_items .item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+}
+.cs_list_items .item img {
+  width: 100%;
+}
+.cs_list_items .list_view .item .item_img_2 {
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  /* border-radius: 50%; */
+}
+.cs_list_items .item .item_img_2 img {
+  width: 100%;
+  height: 100%;
+}
+.cs_list_items .list_view .item .item_img_1 {
+  margin: 0px 20px;
+  width: 150px;
+}
+.cs_list_items .list_view .item .item_desc {
+  flex: 1;
+}
+.cs_list_items .item .item_desc .item_group {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 900;
+  margin-bottom: 10px;
+  /* text-transform: uppercase; */
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-height: 1.5; /* fallback */
+  max-height: calc(1.5 * 2);
+}
+.cs_list_items .item .item_desc .item_title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-height: 1.5; /* fallback */
+  max-height: calc(1.5 * 2);
+}
+
+.cs_list_items .grid_view {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.cs_list_items .grid_view .item {
+  /* max-width: calc(25% - 10px); */
+  width: 100%;
+  flex: 0 25%;
+  padding: 15px 13px;
+  justify-content: center;
+  align-items: center;
+  /* margin: 5px; */
+  cursor: pointer;
+}
+.cs_list_items .grid_view .item .item_img_1 {
+  width: 100%;
+  margin-bottom: 2px;
+}
+.cs_list_items .grid_view .item .item_desc {
+  display: flex;
+  align-items: center;
+}
+.cs_list_items .item .item_img_1,
+.cs_list_items .item .item_img_2 {
+  position: relative;
+}
+.cs_list_items .grid_view .item .item_desc .item_img_2 {
+  margin-right: 10px;
+  height: 30px;
+  width: 30px;
+  /* border-radius: 50%; */
+  overflow: hidden;
+}
+.cs_list_items .grid_view .item .item_desc .item_desc_container {
+  flex: 1;
+}
+
+.cs_list_items .grid_view .item .item_desc .item_group {
+  margin-bottom: 0;
+}
+.cs_list_items .grid_view .item .item_desc .item_title {
+  margin-bottom: 6px;
+  -webkit-line-clamp: 1;
+  max-height: calc(1.5 * 1);
+}
+
+.cs_list_items .item img.loading {
+  position: absolute;
+  height: 50%;
+  width: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.cs_list_items .item .item_img_btns {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  top: -100px;
+  padding: 10px 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.418), transparent);
+  transition: 0.2s all ease-in-out;
+}
+.cs_list_items .item:hover .item_img_btns {
+  top: 0px;
+}
+.cs_list_items .item .item_img_btns button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background: rgba(255, 255, 255, 0);
+  /* border-radius: 50%; */
+  padding: 0px;
+  outline: none;
+  transition: 0.2s all ease-in-out;
+}
+.cs_list_items .item .item_img_btns button:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+  .cs_list_items .grid_view .item {
+    flex: 0 33.333%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .cs_list_items .grid_view .item {
+    flex: 0 50%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .cs_list_items .grid_view .item {
+    flex: 0 100%;
+    padding: 15px 0px;
+  }
+}

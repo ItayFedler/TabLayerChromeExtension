@@ -1,0 +1,27 @@
+This extension uses the next resources:
+
+Credits:
+https://code.jquery.com/jquery
+music: www.bensound.com
+
+Permissions are needed as follow:
+
+"tabs"
+1. Needed for capturing visible tab and displaying it as a thumbnail in the grid view.
+2. Needed for maintaining the list of the tabs.
+
+"storage"
+1. Needed for saving the list of tabs in a JSON format.
+2. Needed for saving the thumbnails.
+
+"<all_urls>"
+1. Needed for functionality of the extension.
+
+Videos demonstrating the extension can be found here:
+https://youtu.be/-Qj_Cf1Hymc
+https://youtu.be/xFE18gd8DDU
+
+You can read more about TabLayer at it's home page:
+https://tablayer.com
+
+You can email us at: Support@TabLayer.com

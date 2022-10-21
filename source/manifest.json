@@ -1,0 +1,30 @@
+{
+  "name": "TabLayer",
+  "version": "1.0",
+  "description": "TabLayer - The awesome feature that's sorely missing in Chrome™️: Quick look in tabs",
+  "options_page": "options.html#settings",
+  
+  "icons": {
+    "48": "tablayer_48.png",
+    "128": "tablayer_128.png"
+  },
+  "permissions": [
+    "tabs",
+    "storage",
+    "<all_urls>"
+  ],
+  "browser_action": {
+    "default_title": "TabLayer  - Quick look in tabs for Chrome™",
+    "default_icon": "tablayer_48.png",
+    "default_popup": "tab_layer.html"
+  },
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": false
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://code.jquery.com; object-src 'self'"
+  
+}
